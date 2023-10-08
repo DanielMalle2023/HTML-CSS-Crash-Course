@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Registration Form</title>
+</head>
+<body>
+    <h1>Admission Registration Form</h1>
+    <form action="process_registration.php" method="POST">
+        <!-- Personal Information -->
+        <h2>Personal Information</h2>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br>
+
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" required><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <!-- Contact Information -->
+        <h2>Contact Information</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea><br>
+
+        <!-- Educational Background -->
+        <h2>Educational Background</h2>
+        <label for="previous_school">Previous School:</label>
+        <input type="text" id="previous_school" name="previous_school" required><br>
+
+        <label for="academic_program">Desired Academic Program:</label>
+        <input type="text" id="academic_program" name="academic_program" required><br>
+
+        <label for="graduation_year">Year of Graduation:</label>
+        <input type="number" id="graduation_year" name="graduation_year" required><br>
+
+        <!-- Additional Information -->
+        <h2>Additional Information</h2>
+        <label for="essay">Admission Essay:</label>
+        <textarea id="essay" name="essay" rows="6" required></textarea><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
