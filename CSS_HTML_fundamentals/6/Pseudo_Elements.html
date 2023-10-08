@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Blockquotes</title>
+    <style>
+        /* Base styles for the blockquote container */
+        .blockquote-container {
+            position: relative;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-left: 5px solid #007bff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styles for the content inside the blockquote */
+        .blockquote-container p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        /* Add custom quotation marks using pseudo-elements */
+        .blockquote-container::before,
+        .blockquote-container::after {
+            content: "\201C"; /* Left double quotation mark */
+            font-size: 36px;
+            color: #007bff;
+            position: absolute;
+        }
+
+        .blockquote-container::after {
+            content: "\201D"; /* Right double quotation mark */
+            bottom: 0;
+            right: 0;
+        }
+
+        /* Style the source attribution */
+        .blockquote-container cite {
+            display: block;
+            font-style: italic;
+        }
+
+        /* Add a hover effect with CSS animations */
+        .blockquote-container:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="blockquote-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta?</p>
+        <cite>- Cicero</cite>
+    </div>
+
+    <div class="blockquote-container">
+        <p>Education is the most powerful weapon which you can use to change the world.</p>
+        <cite>- Nelson Mandela</cite>
+    </div>
+
+    <div class="blockquote-container">
+        <p>The only way to do great work is to love what you do.</p>
+        <cite>- Steve Jobs</cite>
+    </div>
+
+    <div class="blockquote-container">
+        <p>Success is not final, failure is not fatal: It is the courage to continue that counts.</p>
+        <cite>- Winston Churchill</cite>
+    </div>
+</body>
+</html>
